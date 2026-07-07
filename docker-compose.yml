@@ -12,7 +12,7 @@ services:
       - mongo2
       - mongo3
     networks:
-      - bc_interface
+      - test-verifier_bc_interface
 
   mongo1:
     container_name: mongo1
@@ -32,7 +32,7 @@ services:
       #- ~/data/mongo:/data/db
       #- mongo1_data:/data/db
     networks:
-      - bc_interface
+      - test-verifier_bc_interface
 
   mongo2:
     container_name: mongo2
@@ -52,7 +52,7 @@ services:
       #- ~/data/mongo:/data/db
       #- mongo2_data:/data/db
     networks:
-      - bc_interface
+      - test-verifier_bc_interface
 
   mongo3:
     container_name: mongo3
@@ -72,8 +72,8 @@ services:
       #- ~/data/mongo:/data/db
       #- mongo3_data:/data/db
     networks:
-      - bc_interface
+      - test-verifier_bc_interface
 
 networks:
-  bc_interface:
-    driver: bridge
+  test-verifier_bc_interface:
+    external: true
